@@ -23,7 +23,7 @@ function init(options,cb){
                     throw cb(err,"MPU-BMP connect method not properly defined");
                 }
                 mpu=mpu.connect(I2C2);
-                bmp=bpm.connect(I2C2);
+                bmp=bmp.connect(I2C2);
                 cb(err,"MPU-BMP Enabled");
             }
             else {
