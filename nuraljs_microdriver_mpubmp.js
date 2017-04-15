@@ -1,3 +1,4 @@
+module.exports.init=init;
 
 var mpu;
 var bmp;
