@@ -23,9 +23,9 @@ function init(options,cb){
                     throw cb(err,"MPU-BMP connect method not properly defined");
                 }
                 mpu=mpu.connect(method,function(err,res){
-                    if(err) throw cb(err,"mpu Error");
+                    if(err) throw err;
                     bmp=bmp.connect(method,function(err,res){
-                         if(err) throw cb(err,"bmp Error");
+                         if(err) throw err;
                          cb(err,"MPU-BMP Enabled");
                     });
                 });
