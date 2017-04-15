@@ -12,12 +12,13 @@ function init(options,cb){
             bmp=options.bmp;
             if(options.method){
                 if(options.method.method=="I2C1"&&options.method.sda&&options.method.scl){
-                    I2C1.setup({sda:options.method.sda,scl:options.method.scl});
-                    method=I2C1.setup({sda:options.method.sda,scl:options.method.scl});
+                    i2cSwitcher("I2C1",options.method.sda,options.method.scl);
+                    method=I2C1
                 }
                 else if(options.method.method=="I2C2"&&options.method.sda&&options.method.scl){
                     console.log("gottohere");
-                    method=I2C2.setup({sda:options.method.sda,scl:options.method.scl});
+                    i2cSwitcher("I2C2",options.method.sda,options.method.scl);
+                    method=I2C2
                 }
                 else{
                     throw cb(err,"MPU-BMP connect method not properly defined");
