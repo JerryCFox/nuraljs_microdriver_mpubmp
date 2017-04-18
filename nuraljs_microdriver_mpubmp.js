@@ -9,12 +9,7 @@ function init(options,cb){
             mpu=options.mpu;
             bmp=options.bmp;
             if(options.method){
-                if(options.method){
-                    method=options.method;
-                }
-                else{
-                    throw cb(err,"MPU-BMP connect method not properly defined");
-                }
+                method=options.method;
                 mpu=mpu.connect(method,function(err,res){
                     if(err) throw err;
                     bmp=bmp.connect(method,function(err,res){
