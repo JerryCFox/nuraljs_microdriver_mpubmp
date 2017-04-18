@@ -12,10 +12,10 @@ function init(options,cb){
                 method=options.method;
                 mpu=mpu.connect(method,function(err,res){
                     if(err) throw err;
-                    bmp=bmp.connect(method,function(err,res){
-                         if(err) throw err;
+                    //bmp=bmp.connect(method,function(err,res){
+                    //     if(err) throw err;
                          cb(err,"MPU-BMP Enabled");
-                    });
+                    //});
                 });
             }
             else {
